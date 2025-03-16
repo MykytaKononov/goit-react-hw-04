@@ -1,10 +1,19 @@
 import { useState } from "react";
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 export default function SearchBar({ onSearch }) {
   const [request, setRequest] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (request.trim() === "") {
+      iziToast.error({
+        title: "Error",
+        message: "Search can't be empty",
+      });
+      return;
+    }
     onSearch(request);
   };
 

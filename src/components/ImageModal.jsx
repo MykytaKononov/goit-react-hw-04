@@ -28,8 +28,14 @@ export default function ImageModal({ image, isOpen, onRequestClose }) {
         onRequestClose={onRequestClose}
         style={customStyles}
       >
-        <button onClick={onRequestClose}>close</button>
-        <img src={image.urls.regular} alt={image.alt_description} />
+        <button onClick={onRequestClose} className="close-button">
+          &times;
+        </button>
+        <img
+          src={image.urls.regular}
+          alt={image.alt_description}
+          style={{ width: "100%", height: "auto" }}
+        />
       </Modal>
     </div>
   );

@@ -3,7 +3,7 @@ import ImageCard from "./ImageCard";
 
 export default function ImageGallery({ images, onImageClick }) {
   return (
-    <div>
+    <ul>
       {images.map((image) => (
         <ImageCard
           image={image}
@@ -11,6 +11,6 @@ export default function ImageGallery({ images, onImageClick }) {
           onClick={() => onImageClick(image)}
         />
       ))}
-    </div>
+    </ul>
   );
 }
