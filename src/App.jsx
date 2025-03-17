@@ -5,6 +5,7 @@ import Loader from "./components/Loader";
 import ImageModal from "./components/ImageModal";
 import ErrorMessage from "./components/ErrorMessage";
 import LoadMoreBtn from "./components/LoadMoreBtn";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <SearchBar onSearch={handleSearch} />
       {loading && <Loader loading={loading} />}
       {error && <ErrorMessage error={error} />}
