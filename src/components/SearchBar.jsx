@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import "izitoast/dist/css/iziToast.min.css";
 
 export default function SearchBar({ onSearch }) {
   const [request, setRequest] = useState("");
