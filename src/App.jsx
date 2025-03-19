@@ -4,7 +4,7 @@ import UnsplashAPI from "./components/UnsplashAPI";
 import Loader from "./components/Loader";
 import ImageModal from "./components/ImageModal";
 import ErrorMessage from "./components/ErrorMessage";
-import LoadMoreBtn from "./components/LoadMoreBtn";
+import LoadMoreBtn from "./components/loadMoreBtn";
 import { Toaster } from "react-hot-toast";
 
 function App() {
